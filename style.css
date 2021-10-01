@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    /* background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: slider 20s infinite ease-in-out;
+    height: 100vh;
+}
+@keyframes slider {
+    0%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg');background-size: cover;}
+    20%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg');background-size: cover;}
+    20.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image2.jpg');background-size: cover;}
+    40%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image2.jpg');background-size: cover;}
+    40.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image3.jpg');background-size: cover;}
+    60%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image3.jpg');background-size: cover;}
+    60.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image4.jpg');background-size: cover;}
+    80%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image4.jpg');background-size: cover;}
+    80.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image5.jpg');background-size: cover;}
+    100%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image5.jpg');background-size: cover;}
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    top:0;
+}
+.logo{
+    margin: -10px 15px;
+    position: relative;
+    top: 15px;
+}
+.right-navbar{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.nav-links{
+    display: inline-block;
+    margin-right: 30px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+a{
+    text-decoration: none;
+    color: white ;
+}
+.button{
+    display: inline-block;
+    padding: 15px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.2s ease-in-out;
+
+}
+.signin{
+    background-color:rgb(143 ,114, 40);
+}
+.signin:hover{
+    background-color: rgb(226, 171, 33);
+}
+
+.nav-links:hover{
+    border-radius: 2px;
+    background-color: rgba(218, 216, 216, 0.3);
+}
+.nav-links:hover a{
+    color: rgb(224, 180, 66);
+}
+.hero-message{
+    position: absolute;
+    left: 50%;
+    top:45%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+.donate{
+    position: absolute;
+    left: 50%;
+    top:65%;
+    transform: translate(-50%,-50%);
+    background: crimson;
+    width: 200px;
+}
