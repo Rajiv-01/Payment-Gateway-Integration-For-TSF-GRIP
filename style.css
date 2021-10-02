@@ -11,16 +11,16 @@
     height: 100vh;
 }
 @keyframes slider {
-    0%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg');background-size: cover;}
-    20%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg');background-size: cover;}
-    20.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image2.jpg');background-size: cover;}
-    40%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image2.jpg');background-size: cover;}
-    40.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image3.jpg');background-size: cover;}
-    60%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image3.jpg');background-size: cover;}
-    60.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image4.jpg');background-size: cover;}
-    80%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image4.jpg');background-size: cover;}
-    80.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image5.jpg');background-size: cover;}
-    100%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image5.jpg');background-size: cover;}
+    0%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg');background-size: cover;background-position:center ;}
+    20%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image1.jpg');background-size: cover;background-position:center}
+    20.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image2.jpg');background-size: cover;background-position:center}
+    40%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image2.jpg');background-size: cover;background-position:center}
+    40.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image3.jpg');background-size: cover;background-position:center}
+    60%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image3.jpg');background-size: cover;background-position:center}
+    60.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image4.jpg');background-size: cover;background-position:center}
+    80%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image4.jpg');background-size: cover;background-position:center}
+    80.01%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image5.jpg');background-size: cover;background-position:center}
+    100%{background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('images/dog-image5.jpg');background-size: cover;background-position:center}
 
 }
 .navbar{
@@ -30,11 +30,94 @@
     align-content: center;
     position: sticky;
     top:0;
+    z-index: 100;
+    height: 80px;
+}
+.backround-black{
+    background: rgba(0, 0, 0, 0.9);
 }
 .logo{
-    margin: -10px 15px;
+    margin: 10px 15px;
     position: relative;
-    top: 15px;
+    top: 40px;
+}
+.hamburger{
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	left: 50%;
+	bottom: -30%;
+	transform: translate(-50%,-50%);
+	border: 3px solid darkgoldenrod;
+	border-radius: 100%;
+	background: white;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.hamburger-bars{
+	height: 5px;
+	width: 30px;
+	background: #004c47 ;
+	border-radius: 20rem;
+	transition: all 0.3s ease-in-out;
+}
+.hamburger-bars::before,.hamburger-bars::after{
+    content: ' ';
+    position: absolute;
+	height: 5px;
+	width: 30px;
+	background: #004c47 ;
+	border-radius: 20rem;
+	transition: all 0.3s ease-in-out;
+}
+.hamburger-bars::before{
+	transform: translateY(-10px);
+}
+.hamburger-bars::after{
+	transform: translateY(10px);
+}
+
+/* Animation for hamburger icon */
+
+.hamburger.open .hamburger-bars::before{
+	transform: rotate(45deg) translate(-7.5px,7.5px) ;
+
+}
+.hamburger.open .hamburger-bars::after{
+	transform: rotate(-45deg) translate(-7.5px,-7.5px);
+}
+.hamburger.open .hamburger-bars{
+	 transform: translateX(11px);
+	 background: transparent;
+}
+.menuboxfull{
+transition: all 0.3s ease-in-out;
+transform: translateY(-350px);
+z-index: 200;
+}
+.menubox{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+   
+}
+.menubox a{
+    margin: 15px;
+    font-size: 1.2rem;
+}
+.menubox a:hover{
+    color: crimson;
 }
 .right-navbar{
     display: flex;
@@ -42,6 +125,7 @@
     align-content: center;
     align-items: center;
     margin-right: 15px;
+    padding-top: 15px;
 }
 .nav-links{
     display: inline-block;
@@ -83,6 +167,10 @@ a{
 .nav-links:hover a{
     color: rgb(224, 180, 66);
 }
+.hero{
+    z-index: 10;
+    transition: all 0.5 ease-in-out;
+}
 .hero-message{
     position: absolute;
     left: 50%;
@@ -95,6 +183,9 @@ a{
     text-align: center;
     line-height: 50px;
 }
+.small-message{
+    font-size: 1rem;
+}
 .donate{
     position: absolute;
     left: 50%;
@@ -102,4 +193,177 @@ a{
     transform: translate(-50%,-50%);
     background: crimson;
     width: 200px;
+}
+.about{
+    text-align: center;
+    padding: 40px;
+}
+.about h1{
+    font-size: 3rem;
+    font-family:cursive;
+    color: crimson;
+    margin: 20px;
+}
+.services{
+    text-align: center;
+    padding: 40px;
+    position: relative;
+
+}
+.services h1{
+    font-size: 3rem;
+    font-family: cursive;
+    color: crimson;
+    margin: 20px;
+}
+
+.services-box{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+.box{
+    height: 300px;
+    width: 20%;
+    border: 2px solid black;
+    padding: 2px 2px ;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.box h2{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: crimson;
+    text-shadow:1px 1px 1px white;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#box1{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/dog\ service\ \(1\).jpg");
+    background-size: 300px 350px;
+    
+}
+#box2{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/dog\ service\ \(2\).jpg");
+   background-size: 300px 350px;
+    
+}
+#box3{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/dog\ service\ \(3\).jpg");
+   background-size: 300px 350px;
+    
+}
+#box4{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/dog\ service\ \(4\).jpg");
+    background-size: 300px 350px;
+    
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+.social-icon i{
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+}
+.mid-footer li{
+    text-align: left;
+    margin: 0 0 10px 30px;
+}
+.right-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+input{
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    padding: 5px 10px ;
+}
+.small{ 
+    display: block;
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+@media screen and (max-width:1100px) {
+    .vanished{
+        display: none;
+    }
+    .hero-message{
+        font-size: 1rem;
+    }
+    .small-message{
+        font-size: 0.5;
+    }
+    .donate{
+        width: 150px;
+    }
+    .button{
+        font-size: 0.8rem;
+    }
+    .box{
+       width: 40%;
+    }
+    .box h2{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .vanished1{
+        display: none;
+    }
+    .hero-message{
+        font-size: 0.8rem;
+        line-height: 30px;
+    }
+    .small-message{
+        font-size: 0.5rem;
+    }
+    .signin{
+        width: 100px;
+        font-size: 0.6rem;
+    }
+    .box h2{
+        font-size: 1.2rem;
+    }
+    #box1{
+        width: 80%;
+        background-size: cover;
+    }
+    #box2{
+        width: 80%;
+        background-size: cover;
+    }
+    #box3{
+        width: 80%;
+        background-size: cover;
+    }
+    #box4{
+        width: 80%;
+        background-size: cover;
+    }
+    .mid-footer{
+        margin-top: 25px
+    }
+    .right-footer{
+        margin-top: 25px;
+    }
+    .hamburger{
+        display: flex;
+    }
 }
