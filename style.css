@@ -186,13 +186,11 @@ a{
 .small-message{
     font-size: 1rem;
 }
-.donate{
+#donatenow{
     position: absolute;
     left: 50%;
     top:65%;
     transform: translate(-50%,-50%);
-    background: crimson;
-    width: 200px;
 }
 .about{
     text-align: center;
