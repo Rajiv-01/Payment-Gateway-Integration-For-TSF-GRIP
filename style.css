@@ -332,9 +332,17 @@ input{
     .small-message{
         font-size: 0.5rem;
     }
+    .logo{
+        margin: 2px;
+    position: relative;
+    top: 25px;
+    left: -10px;
+}
     .signin{
-        width: 100px;
+        width: 80px;
         font-size: 0.6rem;
+        padding: 10px;
+        margin-top: 50px;
     }
     .box h2{
         font-size: 1.2rem;
@@ -363,5 +371,18 @@ input{
     }
     .hamburger{
         display: flex;
+        align-content: center;
+        width: 35px;
+        height: 35px;
     }
+    .hamburger-bars,.hamburger-bars::before,.hamburger-bars::after{
+        width: 20px;
+        height: 3px;
+    }
+    .hamburger-bars::before{
+	transform: translateY(-6px);
+}
+.hamburger-bars::after{
+	transform: translateY(6px);
+}
 }
